@@ -1,6 +1,6 @@
 # SharedFolderMountScript
 
-This is a simple script for people like me who have had problems with network shared folders connected when using [Sonarr](https://sonarr.tv), Radarr[Radarr](https://radarr.video) or client torrents like Deluge[Deluge](https://deluge-torrent.org) and qBittorrent[qBittorrent](https://www.qbittorrent.org).
+This is a simple script for people like me who have had problems with network shared folders connected when using [Sonarr](https://sonarr.tv), [Radarr](https://radarr.video) or client torrents like [Deluge](https://deluge-torrent.org) and [qBittorrent](https://www.qbittorrent.org).
 In particular in my case these applications are run on docker containers managed by [CasaOS](https://www.casaos.io).
 
 Unfortunately, however, there were several problems with folder permissions, as they all seem to belong to the root user.
