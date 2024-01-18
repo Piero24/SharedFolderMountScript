@@ -24,11 +24,11 @@ moviesMount=0
 seriesMount=0
 
 # Loop to attempt editing at 30 second intervals
-# Replace the objects in brackets with the appropriate location of your NAS and the path you would like to mount the folder
+# Replace the objects in brackets with the appropriate location of your NAS, path you would like to mount the folder, your username, and your password
 while true; do
 
     if [ $downMount -eq 0 ]; then
-        sudo mount -t cifs [//IP-ADDRESS/PATH] [/PATH-TO-MOUNT default: /DATA/Downloads] -o username=USERNAME-HERE,password=PASSWORD-HERE,vers=3.0,rw,uid=1000,gid=1000,forceuid,forcegid,file_mode=0777,dir_mode=0777,nounix
+        sudo mount -t cifs [//IP-ADDRESS/PATH] [/PATH-TO-MOUNT default: /DATA/Downloads] -o username=[USERNAME-HERE],password=[PASSWORD-HERE],vers=3.0,rw,uid=1000,gid=1000,forceuid,forcegid,file_mode=0777,dir_mode=0777,nounix
 
         if [ $? -eq 0 ]; then
             echo "downloads mount successful!"
@@ -38,7 +38,7 @@ while true; do
     fi
 
     if [ $moviesMount -eq 0 ]; then
-        sudo mount -t cifs [//IP-ADDRESS/PATH] [/PATH-TO-MOUNT default: /DATA/Media/Movies] -o username=USERNAME-HERE,password=PASSWORD-HERE,vers=3.0,rw,uid=1000,gid=1000,forceuid,forcegid,file_mode=0777,dir_mode=0777,nounix
+        sudo mount -t cifs [//IP-ADDRESS/PATH] [/PATH-TO-MOUNT default: /DATA/Media/Movies] -o username=[USERNAME-HERE],password=[PASSWORD-HERE],vers=3.0,rw,uid=1000,gid=1000,forceuid,forcegid,file_mode=0777,dir_mode=0777,nounix
 
         if [ $? -eq 0 ]; then
             echo "movies mount successful!"
@@ -48,7 +48,7 @@ while true; do
     fi
 
     if [ $seriesMount -eq 0 ]; then
-        sudo mount -t cifs [//IP-ADDRESS/PATH] [/PATH-TO-MOUNT default: /DATA/Media/TV\ Shows] -o username=USERNAME-HERE,password=PASSWORD-HERE,vers=3.0,rw,uid=1000,gid=1000,forceuid,forcegid,file_mode=0777,dir_mode=0777,nounix
+        sudo mount -t cifs [//IP-ADDRESS/PATH] [/PATH-TO-MOUNT default: /DATA/Media/TV\ Shows] -o username=[USERNAME-HERE],password=[PASSWORD-HERE],vers=3.0,rw,uid=1000,gid=1000,forceuid,forcegid,file_mode=0777,dir_mode=0777,nounix
 
         if [ $? -eq 0 ]; then
             echo "shows mount successful!"
