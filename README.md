@@ -32,7 +32,7 @@ Then the first line of mount will have to be modified as follows:
 
 **BEFORE**
 ```sh
-sudo mount -t cifs //IP-ADDRESS/PATH /PATH-TO-MOUNT -o username=USERNAME-HERE,password=PASSWOR-HERE,vers=3.0,rw,uid=1000,gid=1000,forceuid,forcegid,file_mode=0777,dir_mode=0777,nounix
+sudo mount -t cifs [//IP-ADDRESS/PATH] [/PATH-TO-MOUNT default: /DATA/Downloads] -o username=[USERNAME-HERE],password=[PASSWORD HERE],vers=3.0,rw,uid=1000,gid=1000,forceuid,forcegid,file_mode=0777,dir_mode=0777,nounix
 ```
 
 **AFTER**
